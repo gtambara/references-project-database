@@ -1056,3 +1056,44 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- Inserting into Country
+insert into Country(id, Name) Values(1, "Brazil");
+insert into Country(id, Name) Values(2, "France");
+insert into Country(id, Name) Values(3, "USA");
+insert into Country(id, Name) Values(4, "Spain");
+insert into Country(id, Name) Values(5, "Italy");
+
+-- Inserting into FUStateProvince
+insert into FUStateProvince(id, Name, Country_id) Values(1, "DF", 1);
+insert into FUStateProvince(id, Name, Country_id) Values(2, "Ile-de-France", 2);
+insert into FUStateProvince(id, Name, Country_id) Values(3, "California", 3);
+insert into FUStateProvince(id, Name, Country_id) Values(4, "Navarre", 4);
+insert into FUStateProvince(id, Name, Country_id) Values(5, "Kingdom of Naples", 5);
+
+-- Inserting into City
+insert into City(id, Name, PhoneCode_id, FUStateProvince_id) Values(1, "Brasilia", 1, 1);
+insert into City(id, Name, PhoneCode_id, FUStateProvince_id) Values(2, "Paris", 2, 2);
+insert into City(id, Name, PhoneCode_id, FUStateProvince_id) Values(3, "San Francisco", 3, 3);
+insert into City(id, Name, PhoneCode_id, FUStateProvince_id) Values(4, "Barcelona", 4, 4);
+insert into City(id, Name, PhoneCode_id, FUStateProvince_id) Values(5, "Venice", 5, 5);
+
+-- Inserting into Neighborhood
+insert into Neighborhood(id, Name, City_id) Values(1, "North Wing", 1);
+insert into Neighborhood(id, Name, City_id) Values(2, "11th Arrondissement", 2);
+insert into Neighborhood(id, Name, City_id) Values(3, "Mission District", 3);
+insert into Neighborhood(id, Name, City_id) Values(4, "Retiro", 4);
+insert into Neighborhood(id, Name, City_id) Values(5, "Cannaregio", 5);
+
+-- Inserting into AddressType
+insert into AddressType(id, Description) Values(1, "Residential");
+insert into AddressType(id, Description) Values(2, "Commercial");
+
+-- Inserting into Address
+insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(1, "SQN 411 Bloco E Apt 604", 1, 1);
+insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(2, "Building Sacre Coeur Apt 205", 2, 2);
+insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(3, "Sanchez Street 619", 3, 1);
+insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(4, "Building Montana Apt 501", 4, 2);
+insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(5, "Building Concrata Apt 306", 5, 1);
+
+

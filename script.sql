@@ -1057,6 +1057,13 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+-- Inserting into PhoneCode
+insert into PhoneCode(id, Code) Values(1, "61");
+insert into PhoneCode(id, Code) Values(2, "33");
+insert into PhoneCode(id, Code) Values(3, "415");
+insert into PhoneCode(id, Code) Values(4, "93");
+insert into PhoneCode(id, Code) Values(5, "39");
+
 -- Inserting into Country
 insert into Country(id, Name) Values(1, "Brazil");
 insert into Country(id, Name) Values(2, "France");
@@ -1096,4 +1103,30 @@ insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(3, "
 insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(4, "Building Montana Apt 501", 4, 2);
 insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(5, "Building Concrata Apt 306", 5, 1);
 
+-- Inserting into Event
+insert into Event(id, Name, Date, Address_id) Values(1, "Congress of Brazil", 2022-08-15, 1);
+insert into Event(id, Name, Date, Address_id) Values(2, "Congress of France", 2021-07-14, 2);
+insert into Event(id, Name, Date, Address_id) Values(3, "Congress of USA", 2020-06-13, 3);
+insert into Event(id, Name, Date, Address_id) Values(4, "Congress of Spain", 2019-05-12, 4);
+insert into Event(id, Name, Date, Address_id) Values(5, "Congress Italy", 2018-04-11, 5);
 
+-- Inserting into Section
+insert into Section(id, Title, Number) Values(1, "Data Analysis", 1);
+insert into Section(id, Title, Number) Values(2, "NoSQL Databases", 2);
+insert into Section(id, Title, Number) Values(3, "Big Data", 3);
+insert into Section(id, Title, Number) Values(4, "GitHub", 4);
+insert into Section(id, Title, Number) Values(5, "Ubuntu", 5);
+
+-- Inserting into PhoneType
+insert into PhoneType(id, Description) Values(1, "Residential");
+insert into PhoneType(id, Description) Values(2, "Commercial");
+
+-- Inserting into PhoneNumber
+insert into PhoneNumber(id, Number, PhoneCode_id, PhoneType_id, Author_id) Values(1, "8120-1474", 1, 1, 1);
+insert into PhoneNumber(id, Number, PhoneCode_id, PhoneType_id, Author_id) Values(2, "8304-2368", 2, 2, 2);
+insert into PhoneNumber(id, Number, PhoneCode_id, PhoneType_id, Author_id) Values(3, "8681-5908", 3, 1, 3);
+insert into PhoneNumber(id, Number, PhoneCode_id, PhoneType_id, Author_id) Values(4, "9296-7831", 4, 2, 4);
+insert into PhoneNumber(id, Number, PhoneCode_id, PhoneType_id, Author_id) Values(5, "9340-6794", 5, 1, 5);
+
+-- Inserting into Article
+insert into Article(id, Title, Abstract, PublishDate, FromWeb, WebAddress_id, Topic_id, Author_id, Institution_id, Event_id) Values();

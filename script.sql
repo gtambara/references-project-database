@@ -1135,6 +1135,32 @@ insert into Nationality(id, Name) Values(4, "Spanish");
 insert into Nationality(id, Name) Values(5, "Italian");
 
 -- Inserting into Author
+insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Nationality_id) Values(1, 1, 1, "Gabriel", "12345678900", "1234567", 1, 1, 1, 1);
+insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Nationality_id) Values(2, 2, 2, "Marcos", "00987654321", "7654321", 2, 2, 2, 2);
+insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Nationality_id) Values(3, 3, 3, "Luis", "12365498700", "1236457", 3, 3, 3, 3);
+insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Nationality_id) Values(4, 4, 4, "Alexandre", "00987456123", "3124567", 4, 4, 4, 4);
+insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Nationality_id) Values(5, 5, 5, "Emanuel", "13264597800", "2136457", 5, 5, 5, 5);
+
+-- Inserting into WebAddress
+insert into WebAddress(id, URL) Values(1, "www.site1.com");
+insert into WebAddress(id, URL) Values(2, "www.site2.com");
+insert into WebAddress(id, URL) Values(3, "www.site3.com");
+insert into WebAddress(id, URL) Values(4, "www.site4.com");
+insert into WebAddress(id, URL) Values(5, "www.site5.com");
+
+-- Inserting into Institution
+insert into Institution(id, Name, WebAddress_id) Values(1, "UnB", 1);
+insert into Institution(id, Name, WebAddress_id) Values(2, "CeuB", 2);
+insert into Institution(id, Name, WebAddress_id) Values(3, "UFRJ", 3);
+insert into Institution(id, Name, WebAddress_id) Values(4, "UFMG", 4);
+insert into Institution(id, Name, WebAddress_id) Values(5, "MIT", 5);
+
+-- Inserting into Journal
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", 2022-05-10, 1, 1, 1, 1);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", 2022-05-10, 1, 1, 1, 1);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", 2022-05-10, 1, 1, 1, 1);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", 2022-05-10, 1, 1, 1, 1);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", 2022-05-10, 1, 1, 1, 1);
 
 -- Inserting into PhoneCode
 insert into PhoneCode(id, Code) Values(1, "61");

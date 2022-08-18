@@ -1057,6 +1057,85 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+-- Inserting into InitialPage
+insert into InitialPage(id, Number) Values(1, 10);
+insert into InitialPage(id, Number) Values(2, 20);
+insert into InitialPage(id, Number) Values(3, 30);
+insert into InitialPage(id, Number) Values(4, 40);
+insert into InitialPage(id, Number) Values(5, 50);
+
+-- Inserting into Topic
+insert into Topic(id, Topic, Description) Values(1, "DataBases", "Description of different types of data bases.");
+insert into Topic(id, Topic, Description) Values(2, "Operational System", "Description of different types of operational systems.");
+insert into Topic(id, Topic, Description) Values(3, "Real Time Systems", "Description of different types of real time systems.");
+insert into Topic(id, Topic, Description) Values(4, "Electric Circuits", "Description of different types of electric circuits.");
+insert into Topic(id, Topic, Description) Values(5, "Buildings", "Description of different types of buildings.");
+
+-- Inserting into TitleOfResearcher
+insert into TitleOfResearcher(id, Title) Values(1, "Senior Researcher");
+insert into TitleOfResearcher(id, Title) Values(2, "Junior Associate Researcher");
+insert into TitleOfResearcher(id, Title) Values(3, "Associate Researcher");
+insert into TitleOfResearcher(id, Title) Values(4, "Senior Associate Researcher");
+insert into TitleOfResearcher(id, Title) Values(5, "Post-doc Research Fellow");
+
+-- Inserting into ProjectOfResearcher
+insert into ProjectOfResearcher(id, Name) Values(1, "Research of NoSQL DataBases");
+insert into ProjectOfResearcher(id, Name) Values(2, "Research of Unix OS");
+insert into ProjectOfResearcher(id, Name) Values(3, "Research of Plane Control Systems");
+insert into ProjectOfResearcher(id, Name) Values(4, "Research of Three Phases Circuits");
+insert into ProjectOfResearcher(id, Name) Values(5, "Research of Buildings Architectures");
+
+-- Inserting into Researcher
+insert into Researcher(id, IsCommercialWorker, TitleOfResearcher_id, ProjectOfResearcher_id) Values(1, 0, 1, 1);
+insert into Researcher(id, IsCommercialWorker, TitleOfResearcher_id, ProjectOfResearcher_id) Values(2, 0, 2, 2);
+insert into Researcher(id, IsCommercialWorker, TitleOfResearcher_id, ProjectOfResearcher_id) Values(3, 0, 3, 3);
+insert into Researcher(id, IsCommercialWorker, TitleOfResearcher_id, ProjectOfResearcher_id) Values(4, 1, 4, 4);
+insert into Researcher(id, IsCommercialWorker, TitleOfResearcher_id, ProjectOfResearcher_id) Values(5, 1, 5, 5);
+
+-- Inserting into Occupation
+insert into Occupation(id, Name) Values(1, "Teacher");
+insert into Occupation(id, Name) Values(2, "Engineer");
+insert into Occupation(id, Name) Values(3, "Software Developer");
+insert into Occupation(id, Name) Values(4, "Lawyer");
+insert into Occupation(id, Name) Values(5, "Judge");
+
+-- Inserting into ComercialEmployee
+insert into ComercialEmployee(id, Occupation_id) Values(1, 1);
+insert into ComercialEmployee(id, Occupation_id) Values(2, 2);
+insert into ComercialEmployee(id, Occupation_id) Values(3, 3);
+insert into ComercialEmployee(id, Occupation_id) Values(4, 4);
+insert into ComercialEmployee(id, Occupation_id) Values(5, 5);
+
+-- Inserting into Schooling
+insert into Schooling(id, Level) Values(1, "Finished High School");
+insert into Schooling(id, Level) Values(2, "Associate");
+insert into Schooling(id, Level) Values(3, "Bachelor");
+insert into Schooling(id, Level) Values(4, "Master");
+insert into Schooling(id, Level) Values(5, "Research Doctorate");
+
+-- Inserting into MaritalStatus
+insert into MaritalStatus(id, MaritalStatus) Values(1, "Single");
+insert into MaritalStatus(id, MaritalStatus) Values(2, "Married");
+insert into MaritalStatus(id, MaritalStatus) Values(3, "Widowed");
+insert into MaritalStatus(id, MaritalStatus) Values(4, "Divorced");
+insert into MaritalStatus(id, MaritalStatus) Values(5, "Separated");
+
+-- Inserting into Gender
+insert into Gender(id, Gender) Values(1, "Male");
+insert into Gender(id, Gender) Values(2, "Female");
+insert into Gender(id, Gender) Values(3, "Intersex");
+insert into Gender(id, Gender) Values(4, "Trans");
+insert into Gender(id, Gender) Values(5, "Non-Conforming");
+
+-- Inserting into Nationality
+insert into Nationality(id, Name) Values(1, "Brazilian");
+insert into Nationality(id, Name) Values(2, "French");
+insert into Nationality(id, Name) Values(3, "American");
+insert into Nationality(id, Name) Values(4, "Spanish");
+insert into Nationality(id, Name) Values(5, "Italian");
+
+-- Inserting into Author
+
 -- Inserting into PhoneCode
 insert into PhoneCode(id, Code) Values(1, "61");
 insert into PhoneCode(id, Code) Values(2, "33");
@@ -1129,4 +1208,4 @@ insert into PhoneNumber(id, Number, PhoneCode_id, PhoneType_id, Author_id) Value
 insert into PhoneNumber(id, Number, PhoneCode_id, PhoneType_id, Author_id) Values(5, "9340-6794", 5, 1, 5);
 
 -- Inserting into Article
-insert into Article(id, Title, Abstract, PublishDate, FromWeb, WebAddress_id, Topic_id, Author_id, Institution_id, Event_id) Values();
+-- insert into Article(id, Title, Abstract, PublishDate, FromWeb, WebAddress_id, Topic_id, Author_id, Institution_id, Event_id) Values();

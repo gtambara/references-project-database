@@ -1156,11 +1156,11 @@ insert into Institution(id, Name, WebAddress_id) Values(4, "UFMG", 4);
 insert into Institution(id, Name, WebAddress_id) Values(5, "MIT", 5);
 
 -- Inserting into Journal
-insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", 2022-05-10, 1, 1, 1, 1);
-insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", 2022-05-10, 1, 1, 1, 1);
-insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", 2022-05-10, 1, 1, 1, 1);
-insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", 2022-05-10, 1, 1, 1, 1);
-insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", 2022-05-10, 1, 1, 1, 1);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", "2022-05-10", 1, 1, 1, 1);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(2, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", "2022-05-10", 2, 2, 2, 2);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(3, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", "2022-05-10", 3, 3, 3, 3);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(4, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", "2022-05-10", 4, 4, 4, 4);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(5, "Analysis of DataBases", "A short analysis of different types o data bases used in the industry.", "2022-05-10", 5, 5, 5, 5);
 
 -- Inserting into PhoneCode
 insert into PhoneCode(id, Code) Values(1, "61");

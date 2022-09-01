@@ -1135,62 +1135,6 @@ insert into Gender(id, Gender) Values(3, "Intersex");
 insert into Gender(id, Gender) Values(4, "Trans");
 insert into Gender(id, Gender) Values(5, "Non-Conforming");
 
--- Inserting into Nationality
-insert into Nationality(id, Name) Values(1, "Brazilian");
-insert into Nationality(id, Name) Values(2, "French");
-insert into Nationality(id, Name) Values(3, "American");
-insert into Nationality(id, Name) Values(4, "Spanish");
-insert into Nationality(id, Name) Values(5, "Italian");
-
--- Inserting into Author
-insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Nationality_id) Values(1, 1, 1, "Gabriel", "12345678900", "1234567", 1, 1, 1, 1);
-insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Nationality_id) Values(2, 2, 2, "Marcos", "00987654321", "7654321", 2, 2, 2, 2);
-insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Nationality_id) Values(3, 3, 3, "Luis", "12365498700", "1236457", 3, 3, 3, 3);
-insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Nationality_id) Values(4, 4, 4, "Alexandre", "00987456123", "3124567", 4, 4, 4, 4);
-insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Nationality_id) Values(5, 5, 5, "Emanuel", "13264597800", "2136457", 5, 5, 5, 5);
-
--- Inserting into WebAddress
-insert into WebAddress(id, URL) Values(1, "www.site1.com");
-insert into WebAddress(id, URL) Values(2, "www.site2.com");
-insert into WebAddress(id, URL) Values(3, "www.site3.com");
-insert into WebAddress(id, URL) Values(4, "www.site4.com");
-insert into WebAddress(id, URL) Values(5, "www.site5.com");
-
--- Inserting into Institution
-insert into Institution(id, Name, WebAddress_id) Values(1, "UnB", 1);
-insert into Institution(id, Name, WebAddress_id) Values(2, "CeuB", 2);
-insert into Institution(id, Name, WebAddress_id) Values(3, "UFRJ", 3);
-insert into Institution(id, Name, WebAddress_id) Values(4, "UFMG", 4);
-insert into Institution(id, Name, WebAddress_id) Values(5, "MIT", 5);
-
--- Inserting into Journal
-insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of SQL DataBases", "A short analysis of different types of SQL data bases used in the industry.", "2022-05-10", 1, 1, 1, 1);
-insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(2, "Analysis of Operational Systems", "A short analysis of different types of operational systems used in the industry.", "2022-06-11", 2, 2, 2, 2);
-insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(3, "Analysis of CPUs", "A short analysis of different types of CPUs used in the industry.", "2022-07-12", 3, 3, 3, 3);
-insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(4, "Analysis of Real Time Systems", "A short analysis of different types of real time systems used in the industry.", "2022-08-13", 4, 4, 4, 4);
-insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(5, "Analysis of NoSQL DataBases", "A short analysis of different types of NoSQL data bases used in the industry.", "2022-09-14", 5, 5, 5, 5);
-
--- Inserting into Keyword
-insert into keyword(id, Keyword) Values(1, "SQL");
-insert into keyword(id, Keyword) Values(2, "Linux");
-insert into keyword(id, Keyword) Values(3, "AMD");
-insert into keyword(id, Keyword) Values(4, "Deadline");
-insert into keyword(id, Keyword) Values(5, "NoSQL");
-
--- Inserting into PublishingCompany
-insert into PublishingCompany(id, Name, WebAddress_id) Values(1, "Magazine1", 1);
-insert into PublishingCompany(id, Name, WebAddress_id) Values(2, "Magazine2", 2);
-insert into PublishingCompany(id, Name, WebAddress_id) Values(3, "Magazine3", 3);
-insert into PublishingCompany(id, Name, WebAddress_id) Values(4, "Magazine4", 4);
-insert into PublishingCompany(id, Name, WebAddress_id) Values(5, "Magazine5", 5);
-
--- Inserting into Email
-insert into Email(id, email, PublishingCompany_id, Institution_id, Author_id) Values(1, "email1@gmail.com", 1, 1, 1);
-insert into Email(id, email, PublishingCompany_id, Institution_id, Author_id) Values(2, "email2@gmail.com", 2, 2, 2);
-insert into Email(id, email, PublishingCompany_id, Institution_id, Author_id) Values(3, "email3@gmail.com", 3, 3, 3);
-insert into Email(id, email, PublishingCompany_id, Institution_id, Author_id) Values(4, "email4@gmail.com", 4, 4, 4);
-insert into Email(id, email, PublishingCompany_id, Institution_id, Author_id) Values(5, "email5@gmail.com", 5, 5, 5);
-
 -- Inserting into AddressType
 insert into AddressType(id, Description) Values(1, "Residential");
 insert into AddressType(id, Description) Values(2, "Commercial");
@@ -1237,6 +1181,56 @@ insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(3, "
 insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(4, "Building Montana Apt 501", 4, 2);
 insert into Address(id, Complement, Neighborhood_id, AddressType_id) Values(5, "Building Concrata Apt 306", 5, 1);
 
+
+-- Inserting into Author
+insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Naturality_City_id, Nationality_Country_id) Values(1, 1, 1, "Gabriel", "12345678900", "1234567", 1, 1, 1, 1, 1);
+insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Naturality_City_id, Nationality_Country_id) Values(2, 2, 2, "Marcos", "00987654321", "7654321", 2, 2, 2, 2, 2);
+insert into Author(id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Naturality_City_id, Nationality_Country_id) Values(3, 3, "Luis", "12365498700", "1236457", 3, 3, 3, 3, 3);
+insert into Author(id, ComercialEmployee_id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Naturality_City_id, Nationality_Country_id) Values(4, 4, 4, "Alexandre", "00987456123", "3124567", 4, 4, 4, 4, 4);
+insert into Author(id, Researcher_id, Name, CPF, RG, Schooling_id, MaritalStatus_id, Gender_id, Naturality_City_id, Nationality_Country_id) Values(5, 5, "Emanuel", "13264597800", "2136457", 5, 5, 5, 5, 5);
+
+-- Inserting into WebAddress
+insert into WebAddress(id, URL) Values(1, "www.youtube.com");
+insert into WebAddress(id, URL) Values(2, "www.wikipedia.com");
+insert into WebAddress(id, URL) Values(3, "www.stackexchange.com");
+insert into WebAddress(id, URL) Values(4, "www.uol.com.br");
+insert into WebAddress(id, URL) Values(5, "www.google.com");
+
+-- Inserting into Institution
+insert into Institution(id, Name, WebAddress_id) Values(1, "UnB", 1);
+insert into Institution(id, Name, WebAddress_id) Values(2, "CeuB", 2);
+insert into Institution(id, Name, WebAddress_id) Values(3, "UFRJ", 3);
+insert into Institution(id, Name, WebAddress_id) Values(4, "UFMG", 4);
+insert into Institution(id, Name, WebAddress_id) Values(5, "MIT", 5);
+
+-- Inserting into Journal
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(1, "Analysis of SQL DataBases", "A short analysis of different types of SQL data bases used in the industry.", "2022-05-10", 1, 1, 1, 1);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(2, "Analysis of Operational Systems", "A short analysis of different types of operational systems used in the industry.", "2022-06-11", 2, 2, 2, 2);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(3, "Analysis of CPUs", "A short analysis of different types of CPUs used in the industry.", "2022-07-12", 3, 3, 3, 3);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(4, "Analysis of Real Time Systems", "A short analysis of different types of real time systems used in the industry.", "2022-08-13", 4, 4, 4, 4);
+insert into Journal(id, Title, Abstract, PublishDate, InitialPage_id, Topic_id, Author_id, Institution_id) Values(5, "Analysis of NoSQL DataBases", "A short analysis of different types of NoSQL data bases used in the industry.", "2022-09-14", 5, 5, 5, 5);
+
+-- Inserting into Keyword
+insert into keyword(id, Keyword) Values(1, "SQL");
+insert into keyword(id, Keyword) Values(2, "Linux");
+insert into keyword(id, Keyword) Values(3, "AMD");
+insert into keyword(id, Keyword) Values(4, "Deadline");
+insert into keyword(id, Keyword) Values(5, "NoSQL");
+
+-- Inserting into PublishingCompany
+insert into PublishingCompany(id, Name, WebAddress_id) Values(1, "Magazine1", 1);
+insert into PublishingCompany(id, Name, WebAddress_id) Values(2, "Magazine2", 2);
+insert into PublishingCompany(id, Name, WebAddress_id) Values(3, "Magazine3", 3);
+insert into PublishingCompany(id, Name, WebAddress_id) Values(4, "Magazine4", 4);
+insert into PublishingCompany(id, Name, WebAddress_id) Values(5, "Magazine5", 5);
+
+-- Inserting into Email
+insert into Email(id, email, PublishingCompany_id, Institution_id, Author_id) Values(1, "gabriel@gmail.com", 1, 1, 1);
+insert into Email(id, email, PublishingCompany_id, Institution_id, Author_id) Values(2, "marcos@gmail.com", 2, 2, 2);
+insert into Email(id, email, PublishingCompany_id, Institution_id, Author_id) Values(3, "luis@gmail.com", 3, 3, 3);
+insert into Email(id, email, PublishingCompany_id, Institution_id, Author_id) Values(4, "alexandre@gmail.com", 4, 4, 4);
+insert into Email(id, email, PublishingCompany_id, Institution_id, Author_id) Values(5, "emanuel@gmail.com", 5, 5, 5);
+
 -- Inserting into Event
 insert into Event(id, Name, Date, Address_id) Values(1, "Congress of Brazil", "2022-08-15", 1);
 insert into Event(id, Name, Date, Address_id) Values(2, "Congress of France", "2021-07-14", 2);
@@ -1252,8 +1246,8 @@ insert into Section(id, Title, Number) Values(4, "GitHub", 4);
 insert into Section(id, Title, Number) Values(5, "Ubuntu", 5);
 
 -- Inserting into PhoneType
-insert into PhoneType(id, Description) Values(1, "Residential");
-insert into PhoneType(id, Description) Values(2, "Commercial");
+insert into PhoneType(id, Description) Values(1, "Mobile");
+insert into PhoneType(id, Description) Values(2, "Landline");
 
 -- Inserting into PhoneNumber
 insert into PhoneNumber(id, Number, PhoneCode_id, PhoneType_id, Author_id) Values(1, "8120-1474", 1, 1, 1);
@@ -1305,11 +1299,11 @@ insert into Journal_has_Section(Journal_id, Section_id) Values(4, 4);
 insert into Journal_has_Section(Journal_id, Section_id) Values(5, 5);
 
 -- Inserting into AccessDate
-insert into AccessDate(id, AccessDate, Article_id) Values(1, "2020-01-01", 1);
-insert into AccessDate(id, AccessDate, Article_id) Values(2, "2020-02-02", 2);
-insert into AccessDate(id, AccessDate, Article_id) Values(3, "2020-03-03", 3);
-insert into AccessDate(id, AccessDate, Article_id) Values(4, "2020-04-04", 4);
-insert into AccessDate(id, AccessDate, Article_id) Values(5, "2020-05-05", 5);
+insert into AccessDate(id, AccessDate, Article_id) Values(1, "2020-03-22", 1);
+insert into AccessDate(id, AccessDate, Article_id) Values(2, "2019-02-13", 2);
+insert into AccessDate(id, AccessDate, Article_id) Values(3, "2020-12-03", 3);
+insert into AccessDate(id, AccessDate, Article_id) Values(4, "2018-04-04", 4);
+insert into AccessDate(id, AccessDate, Article_id) Values(5, "2003-05-18", 5);
 
 -- Inserting into Book_has_Edition
 insert into Book_has_Edition(Book_id, Edition_id) Values(1, 1);

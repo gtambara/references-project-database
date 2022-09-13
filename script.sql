@@ -113,8 +113,8 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`Occupation` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Occupation` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(45) NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT 'Identificador do item',
+  `Name` VARCHAR(45) NOT NULL COMMENT 'Nome da ocupação',
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE)
 ENGINE = InnoDB;
@@ -557,7 +557,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`PhoneType` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`PhoneType` (
-  `id` INT NOT NULL COMMENT 'Identificador do item',
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT 'Identificador do item',
   `Description` VARCHAR(45) NOT NULL COMMENT 'Título do tipo de número',
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -569,11 +569,11 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`PhoneNumber` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`PhoneNumber` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `Number` VARCHAR(9) NOT NULL,
-  `PhoneCode_id` INT NOT NULL,
-  `PhoneType_id` INT NOT NULL,
-  `Author_id` INT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT 'Identificador do item',
+  `Number` VARCHAR(9) NOT NULL COMMENT 'Numero do telefone',
+  `PhoneCode_id` INT NOT NULL COMMENT 'Identificador do codigo do telefone',
+  `PhoneType_id` INT NOT NULL COMMENT 'Identificador do tipo de telefone',
+  `Author_id` INT NULL COMMENT 'Identificador do dono do telefone',
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
   INDEX `fk_PhoneNumber_PhoneCode1_idx` (`PhoneCode_id` ASC) VISIBLE,
@@ -595,7 +595,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`PhoneNumber` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `mydb`.`Article`
@@ -659,7 +658,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Book` (
   `Abstract` VARCHAR(512) NOT NULL COMMENT 'Resumo do conteúdo do livro de até 512 caracteres',
   `PublishDate` DATE NOT NULL COMMENT 'Data de publicação do livro',
   `InitialPage_id` INT NOT NULL COMMENT 'Identificador do item',
-  `Topic_id` INT NOT NULL,
+  `Topic_id` INT NOT NULL COMMENT 'Identificador do tópico',
   `Author_id` INT NOT NULL COMMENT 'Identificador do item',
   `Institution_id` INT NOT NULL COMMENT 'Identificador do item',
   PRIMARY KEY (`id`, `InitialPage_id`, `Author_id`),
@@ -733,7 +732,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`Edition` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Edition` (
-  `id` INT NOT NULL COMMENT 'Identificador do item',
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT 'Identificador do item',
   `Number` VARCHAR(45) NOT NULL COMMENT 'Número da edição do documento',
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;

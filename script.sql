@@ -1,6 +1,6 @@
--- Universidade de Brasília - October 24 of 2022
+-- Universidade de Brasília - September 13 of 2022
 -- Authors:	David Fanchic Chatelard - 18/0138863		
---			Gabriel Tambara Rabelo - 18/0017021
+--			    Gabriel Tambara Rabelo - 18/0017021
 --
 -- Inserção de dados na linha 1064
 --

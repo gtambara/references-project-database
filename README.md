@@ -19,8 +19,8 @@ Heres a simple preview of the tables and it's respective items, commented in Bra
 5. Researcher
   - INT id 'Identificador do item'
   - TINYINT IsCommercialWorker 'Boolenado referente a ser um trabalhador empregado'
-  - INDEX INT TitleOfResearcher_id 'Identificador do pesquisador'
-  - INDEX INT ProjectOfResearcher_id 'Identificador do projeto de pesquisa'
+  - INT TitleOfResearcher_id 'Identificador do pesquisador'
+  - INT ProjectOfResearcher_id 'Identificador do projeto de pesquisa'
 6. Occupation
   - INT id 'Identificador do item'
   - VARCHAR(45) Name 'Nome da ocupação'
